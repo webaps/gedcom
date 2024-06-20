@@ -1,0 +1,32 @@
+name: Lint and test
+
+on:
+  pull_request:
+    types: [reopened, synchronize, labeled]
+
+jobs:
+  build:
+    name: Lint and test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check-out
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Get npm cache
+        uses: actions/cache@v3
+        id: cache-modules
+        with:
+          path: ./node_modules
+          key: modules-${{ hashFiles('package-lock.json') }}
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Lint
+        run: npm run lint
+      - name: Test
+        run: npm run test
+
