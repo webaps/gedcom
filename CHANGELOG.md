@@ -1,0 +1,11 @@
+## 0.0.1 (2024-06-21)
+
+
+### Bug Fixes
+
+* Removed changelog incorrect contents ([#2](https://github.com/webaps/gedcom/issues/2)) ([04feec3](https://github.com/webaps/gedcom/commit/04feec3f3a075fc6aca7bd37b07ef061b5685df0))
+* This should fix branch permissions for GHA ([#3](https://github.com/webaps/gedcom/issues/3)) ([33b7857](https://github.com/webaps/gedcom/commit/33b7857c5b023c8fe646f43ae03e99ffc997059e))
+* This should fix branch permissions for GHA ([#4](https://github.com/webaps/gedcom/issues/4)) ([13290a7](https://github.com/webaps/gedcom/commit/13290a752185200b373aa582ecd8080ee0074c14))
+
+
+
