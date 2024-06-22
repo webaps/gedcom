@@ -9,7 +9,7 @@ export default class FamilyNumberOfChildren extends Structures<number> {
     ...FamilyEventDetail,
   };
 
-  protected setValue(value: string) {
+  protected setValueFromData(value: string) {
     this.value = parseInt(value);
   }
 }

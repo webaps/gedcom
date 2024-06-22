@@ -12,7 +12,7 @@ export default class DidNotHappen extends Structures<Event> {
     ...SourceCitation(true),
   };
 
-  protected setValue(value: string) {
+  protected setValueFromData(value: string) {
     this.value = tryFromValue(value, Event);
   }
 }

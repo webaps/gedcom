@@ -11,7 +11,7 @@ export default class SourceEvent extends Structures<EventType> {
     ROLE: { class: Role, multiple: false },
   };
 
-  protected setValue(value: string) {
+  protected setValueFromData(value: string) {
     this.value = tryFromValue(value, EventType);
   }
 }
