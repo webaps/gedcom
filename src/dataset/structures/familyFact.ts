@@ -9,7 +9,7 @@ export default class FamilyFact extends Structures<string> {
     ...FamilyEventDetail,
   };
 
-  protected setValue(value: string) {
+  protected setValueFromData(value: string) {
     this.value = value;
   }
 }

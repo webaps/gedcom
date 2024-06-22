@@ -8,7 +8,7 @@ export default class FamilyChildStatus extends Structures<FamilyChildStatusEnum>
   protected typeMapping: RelationMapping = {
     PHRASE: { class: Phrase, multiple: false },
   };
-  protected setValue(value: string) {
+  protected setValueFromData(value: string) {
     this.value = tryFromValue(value, FamilyChildStatusEnum);
   }
 }

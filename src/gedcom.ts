@@ -90,11 +90,11 @@ abstract class Gedcom<TValue = any> {
 
   protected setData(line: GedcomLineParts) {
     if (line.value) {
-      this.setValue(line.value);
+      this.setValueFromData(line.value);
     }
   }
 
-  protected setValue(value: string) {
+  protected setValueFromData(value: string) {
     this.value = value as TValue;
   }
 
@@ -126,6 +126,30 @@ abstract class Gedcom<TValue = any> {
           _value: this.value,
         }
       : {};
+  }
+
+  public getValue(): TValue | undefined {
+    return this.value;
+  }
+
+  public getRelations(): Record<string, Gedcom|Gedcom[]> {
+    return this.relations;
+  }
+
+  public getRelationNames(): string[] {
+    return Object.keys(this.relations);
+  }
+
+  public getRelation(name: keyof typeof this.relations): Gedcom|Gedcom[]|undefined {
+    return this.relations[name] ?? undefined;
+  }
+
+  public setValue(value: TValue | undefined) {
+    this.value = value;
+  }
+
+  public setRelation(name: string, value: Gedcom|Gedcom[]) {
+    this.relations[name] = value;
   }
 }
 

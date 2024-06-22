@@ -9,7 +9,7 @@ export default class Medium extends Structures<MediumEnum> {
     PHRASE: { class: Phrase, multiple: false },
   };
 
-  protected setValue(value: string) {
+  protected setValueFromData(value: string) {
     this.value = tryFromValue(value, MediumEnum);
   }
 }
