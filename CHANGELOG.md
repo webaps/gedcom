@@ -1,3 +1,12 @@
+## [0.1.1](https://github.com/webaps/gedcom/compare/v0.1.0...v0.1.1) (2024-06-22)
+
+
+### Bug Fixes
+
+* Fixed file type ([#6](https://github.com/webaps/gedcom/issues/6)) ([3ac061f](https://github.com/webaps/gedcom/commit/3ac061f5a2cfb4a37548edf39a0a355caedc7e13))
+
+
+
 # [0.1.0](https://github.com/webaps/gedcom/compare/v0.0.1...v0.1.0) (2024-06-22)
 
 
