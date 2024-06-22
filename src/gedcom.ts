@@ -1,5 +1,6 @@
 import { GedcomLineParts, getPartsBlockFromPath, getPartsFromString } from './utils/parser';
 import Document from './document';
+import {PathLike} from "node:fs";
 
 export type RelationObject = {
   class: typeof Gedcom<any>;
@@ -17,7 +18,7 @@ abstract class Gedcom<TValue = any> {
     this.parseBlock(data.split('\n').map(getPartsFromString).filter(Boolean) as GedcomLineParts[]);
   }
 
-  public async fromGedcomFile(filePath: string) {
+  public async fromGedcomFile(filePath: PathLike) {
     this.parseBlock(await getPartsBlockFromPath(filePath));
   }
 
